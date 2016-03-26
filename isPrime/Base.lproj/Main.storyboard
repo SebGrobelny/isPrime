@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="isPrime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,87 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Prime Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbp-82-7sH">
+                                <rect key="frame" x="242" y="60" width="116" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="1kU-s2-aTM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="3ki-oG-6eB"/>
+                                    <constraint firstAttribute="height" constant="21" id="OhL-5U-cgR"/>
+                                    <constraint firstAttribute="width" constant="116" id="gBx-Pe-EKG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter a Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nW-y6-SL1">
+                                <rect key="frame" x="235" y="119" width="131" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GAF-hn-leO"/>
+                                    <constraint firstAttribute="width" constant="131" id="Gdp-zJ-o5M"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="IuI-gF-pnZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="TGK-Nf-PyK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Is it Prime?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4n-4C-jeY">
+                                <rect key="frame" x="251" y="153" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="B6I-m7-oPo"/>
+                                    <constraint firstAttribute="width" constant="92" id="Wac-Dv-3mV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="92" id="m0J-cg-QMm"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="xkT-Wt-YgI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifY-ts-XL2">
+                                <rect key="frame" x="258" y="207" width="66" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="66" id="2lI-lw-ypY"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="MtM-Co-nlm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="66" id="RNH-rh-7iH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="cAM-iw-XXN"/>
+                                    <constraint firstAttribute="width" constant="66" id="gJ5-MU-E9a"/>
+                                    <constraint firstAttribute="height" constant="30" id="t7R-j9-Iwi"/>
+                                </constraints>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="Correct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wm2-Ho-nSM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please Enter a Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bc-YY-c5R">
+                                <rect key="frame" x="202" y="254" width="178" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="3Ud-8A-0cs"/>
+                                    <constraint firstAttribute="height" constant="21" id="fB7-84-MEY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zbp-82-7sH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="652-v7-17r"/>
+                            <constraint firstItem="5nW-y6-SL1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6wP-g4-LuP"/>
+                            <constraint firstItem="zbp-82-7sH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Ce-gG-KSf"/>
+                            <constraint firstItem="8bc-YY-c5R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ARQ-BW-DXL"/>
+                            <constraint firstItem="ifY-ts-XL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Agh-ID-AyT"/>
+                            <constraint firstItem="e4n-4C-jeY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TeA-KJ-fQD"/>
+                            <constraint firstItem="5nW-y6-SL1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iqN-7O-zew"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="PrimeBar" destination="e4n-4C-jeY" id="TNF-r0-UMc"/>
+                        <outlet property="isPrime" destination="8bc-YY-c5R" id="cp7-l5-bTg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304" y="355"/>
         </scene>
     </scenes>
 </document>
